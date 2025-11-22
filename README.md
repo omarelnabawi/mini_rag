@@ -15,3 +15,8 @@ $ conda create -n mini_rag_env python=3.8
 ```bash 
 $ conda activate mini_rag_env
 ```
+### (Optional) Setup your commend line interface for better readability
+
+```bash
+export PS1="\[033[01;32m\]\u@\h:\w\n\[\033[00m\]\$"
+```
