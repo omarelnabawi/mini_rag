@@ -41,6 +41,6 @@ set your evironmet variables in the `.env` file. Link `OPENAI_API_KEY` value.
 ```bash
 $ uvicorn main:app --reload --host 0.0.0.0 --port 5000
 ```
-- This will help you if you make changes in your work will automatically upload and anyone can access in it.
+- This will help you if you make changes in your work will automatically upload and anyone can access in it.( But it is't practical in production mood)
 
  
