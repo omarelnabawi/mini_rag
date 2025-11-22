@@ -35,3 +35,12 @@ $ cp .env.example .env
 ```
 
 set your evironmet variables in the `.env` file. Link `OPENAI_API_KEY` value.
+
+#### Run the Fastapi server 
+
+```bash
+$ uvicorn main:app --reload --host 0.0.0.0 --port 5000
+```
+- This will help you if you make changes in your work will automatically upload and anyone can access in it.
+
+ 
