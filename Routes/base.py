@@ -1,6 +1,10 @@
 from fastapi import APIRouter, FastAPI
+import os
 #app=FastAPI()
-base_router = APIRouter()
+base_router = APIRouter(
+    prefix="/api/v1",
+    tags=["LLM Base Routes",""],
+)
 
 @base_router.get("/")
 def welcome():
@@ -9,13 +13,10 @@ def welcome():
             }
 
 @base_router.get("/welcome")
-def welcome():
+async def welcome():
+    app_name=os.getenv("APP_NAME")
+    app_version=os.getenv("APP_VERSION")
     return {
-        "message": "Welcome to the Mini RAG !"
-            }
-
-@base_router.get("/hello")
-def welcome():
-    return {
-        "message": "hello from base router!"
+        "app_name": app_name,
+        "app_version": app_version
             }
