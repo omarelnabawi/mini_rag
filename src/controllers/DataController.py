@@ -30,12 +30,12 @@ class DataController(BaseController):
         )
 
         while os.path.exists(new_file_name):
-            random_key=self.Generate_random_name()
+            random_filename=self.Generate_random_name()
             new_file_name=os.path.join(
                 project_path,
-                random_key+"_"+cleaned_filename
+                random_filename+"_"+cleaned_filename
             )
-        return new_file_name
+        return new_file_name,random_filename+"_"+cleaned_filename
 
     def get_clean_file_name(self,orig_filename:str):
         # Remove special characters and spaces from the filename
